@@ -1,0 +1,39 @@
+{
+  "name": "WebProjectTemplate",
+  "version": "1.0.0",
+  "description": "A quick project development environment featuring some of the best automation system that i like and i think that it could be of big help for you.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chumheramis/project_template.git"
+  },
+  "keywords": [
+    "css",
+    "js",
+    "html",
+    "template",
+    "admin",
+    "bootstrap",
+    "theme",
+    "backend",
+    "responsive"
+  ],
+  "author": "Mark Heramis",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.12.10",
+    "grunt": "^1.0.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-complexity": "^0.3.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-grunt": "^0.5.4",
+    "gulp-php2html": "^0.3.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-ruby-sass": "^2.0.6",
+    "gulp-uglify": "^1.5.3",
+    "gulp-uncss": "^1.0.6"
+  }
+}
