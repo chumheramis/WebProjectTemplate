@@ -7,19 +7,16 @@ var sass = require('gulp-ruby-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync').create();
 require('gulp-grunt')(gulp); // add all the gruntfile tasks to gulp
-
 var DEST = 'assets/';
-
 gulp.task('scripts', function () {
     return gulp.src('src/js/*.js')
-            .pipe(concat('custom.js'))
+            .pipe(concat('main.js'))
             .pipe(gulp.dest(DEST + '/js'))
             .pipe(rename({suffix: '.min'}))
             .pipe(uglify())
             .pipe(gulp.dest(DEST + '/js'))
             .pipe(browserSync.stream());
 });
-// TODO: Maybe we can simplify how sass compile the minify and unminify version
 var compileSASS = function (filename, options) {
     return sass('src/scss/*.scss', options)
             .pipe(autoprefixer('last 2 versions', '> 5%'))
@@ -28,14 +25,10 @@ var compileSASS = function (filename, options) {
             .pipe(browserSync.stream());
 };
 gulp.task('sass', function () {
-    return compileSASS('custom.css', {});
+    return compileSASS('main.css', {});
 });
-
 gulp.task('sass-minify', function () {
-    return compileSASS('custom.min.css', {style: 'compressed'});
-});
-gulp.task('compile-php', function () {
-    return compileSASS('custom.css', {});
+    return compileSASS('main.min.css', {style: 'compressed'});
 });
 gulp.task('sass-minify', function () {
     console.log('compiling sass minified');
